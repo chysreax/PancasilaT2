@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiga Perspektif Fundamental Pancasila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" xintegrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMWAREgoiHRTcmAxQBIZBzLXWXIOHjAomLVkdAiXoRzmakM0svKz1tVjRMaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-accent-gold: #D4AF37;
+            --color-accent-silver: #C0C0C0;
+            --color-accent-beige: #F5F5DC;
+
+            --color-bg-dark: #18181B; /* zinc-900 */
+            --color-bg-card: #27272A; /* zinc-800 */
+            
+            --color-text-light: #E0E0E0;
+            --color-text-bright: #FFFFFF;
+            --color-text-dim: #A1A1AA; /* zinc-400 */
+            --color-border-subtle: #404040; /* zinc-700 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+        }
+        .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            will-change: transform;
+            border: 1px solid var(--color-border-subtle);
+        }
+        .card-hover:hover {
+            transform: scale(1.02);
+            border-color: var(--color-accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+
+        <section class="text-center pt-8 mb-12">
+            <div class="w-56 h-56 mx-auto border-2 border-dashed flex items-center justify-center rounded-lg mb-6" style="border-color: var(--color-accent-gold); background-color: var(--color-bg-card);">
+                <p style="color: var(--color-text-dim);">Tempatkan Logo Anda Di Sini</p>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold font-serif" style="color: var(--color-accent-gold);">
+                Tiga Perspektif Fundamental Pancasila
+            </h1>
+        </section>
+
+        <section class="mb-10">
+            <p class="text-lg leading-relaxed max-w-5xl mx-auto text-center" style="color: var(--color-text-light);">
+                Pancasila sebagai entitas fundamental bagi Negara Kesatuan Republik Indonesia dapat dipelajari dari tiga perspektif utama yang saling melengkapi: sebagai sistem filsafat, dasar falsafah negara, dan ideologi negara. Infografis ini membedah ketiga pendekatan tersebut untuk memberikan pemahaman holistik mengenai kedudukan dan fungsi Pancasila.
+            </p>
+        </section>
+
+        <section class="rounded-lg p-4 md:p-6 mb-10 border" style="background-color: var(--color-bg-card); border-color: var(--color-border-subtle);">
+            <h2 class="text-2xl md:text-3xl font-bold font-serif mb-4 text-center" style="color: var(--color-text-bright);">Analisis Perbandingan Dimensi Perspektif</h2>
+            <p class="mb-6 text-center max-w-3xl mx-auto" style="color: var(--color-text-dim);">
+                Visualisasi ini memetakan fokus relatif dari setiap perspektif Pancasila pada lima dimensi kunci. Ini menunjukkan bagaimana setiap peran memiliki penekanan yang berbeda, mulai dari landasan teoretis murni hingga kekuatan hukum yang mengikat dan fleksibilitas dalam penerapan.
+            </p>
+            <div class="chart-container w-full max-w-3xl mx-auto h-96 md:h-[500px] max-h-[500px]">
+                <canvas id="radarChart"></canvas>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold font-serif mb-6 text-center" style="color: var(--color-accent-gold);">Perbandingan Tiga Perspektif</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <div class="rounded-lg p-6 flex flex-col card-hover" style="background-color: var(--color-bg-card);">
+                    <div class="mb-4 text-center">
+                        <span class="text-5xl" role="img" aria-label="Brain">🧠</span>
+                        <h3 class="text-2xl font-bold font-serif mt-2" style="color: var(--color-text-bright);">
+                            Sistem Filsafat
+                        </h3>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Definisi</h4>
+                        <p class="mb-4 text-sm" style="color: var(--color-text-light);">Kumpulan ajaran terkoordinasi dan komprehensif tentang pemikiran teoritis mendalam mengenai Tuhan, alam semesta, dan kehidupan manusia secara keseluruhan.</p>
+                        
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Fokus Utama</h4>
+                        <p class="mb-4 text-sm" style="color: var(--color-text-light);">Bersifat menyeluruh (komprehensif), radikal, dan sistematis. Mencakup aspek ontologi, epistemologi, dan aksiologi. Sila-silanya merupakan kesatuan organis dan berfungsi sebagai pandangan dunia (Weltanschauung).</p>
+                        
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Contoh Penerapan</h4>
+                        <p class="text-sm" style="color: var(--color-text-light);">Memberikan landasan teoritis dan tujuan bagi perbuatan manusia. Secara normatif, menjadi dasar nilai bagi pengembangan ilmu pengetahuan dan teknologi (IPTEK) di Indonesia.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg p-6 flex flex-col card-hover" style="background-color: var(--color-bg-card);">
+                    <div class="mb-4 text-center">
+                        <span class="text-5xl" role="img" aria-label="Building">🏛️</span>
+                        <h3 class="text-2xl font-bold font-serif mt-2" style="color: var(--color-text-bright);">
+                            Dasar Falsafah Negara
+                        </h3>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Definisi</h4>
+                        <p class="mb-4 text-sm" style="color: var(--color-text-light);">Landasan atau fondasi mendasar (Philosophische Grondslag) bagi berdirinya negara Indonesia merdeka.</p>
+                        
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Fokus Utama</h4>
+                        <p class="mb-4 text-sm" style="color: var(--color-text-light);">Sebagai cita hukum (rechtidee) dan norma fundamental negara (staatsfundamentalnorm) dengan kedudukan tertinggi. Menjadi sumber dari segala sumber hukum; peraturan tidak boleh bertentangan dengan Pancasila. Nilainya digali dari budaya bangsa (causa materialis).</p>
+                        
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Contoh Penerapan</h4>
+                        <p class="text-sm" style="color: var(--color-text-light);">Semua produk hukum (UU, kebijakan) harus didasarkan pada Pancasila. Dalam konflik politik, Pancasila menjadi norma dasar pemersatu untuk menjaga persatuan.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg p-6 flex flex-col card-hover" style="background-color: var(--color-bg-card);">
+                    <div class="mb-4 text-center">
+                        <span class="text-5xl" role="img" aria-label="Compass">🧭</span>
+                        <h3 class="text-2xl font-bold font-serif mt-2" style="color: var(--color-text-bright);">
+                            Ideologi Negara
+                        </h3>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Definisi</h4>
+                        <p class="mb-4 text-sm" style="color: var(--color-text-light);">Seperangkat pandangan, nilai, dan prinsip yang menjadi pedoman hidup dan kerangka idealitas bagi warga negara dan penyelenggaraan negara.</p>
+                        
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Fokus Utama</h4>
+                        <p class="mb-4 text-sm" style="color: var(--color-text-light);">Berfungsi sebagai alat pemersatu bangsa yang plural. Bersifat unik sebagai ideologi terbuka: fleksibel dan adaptif terhadap zaman, namun nilai dasarnya tidak dapat diubah. Mengandung cita-cita dan tujuan bangsa.</p>
+                        
+                        <h4 class="text-lg font-semibold font-serif mb-2" style="color: var(--color-accent-gold);">Contoh Penerapan</h4>
+                        <p class="text-sm" style="color: var(--color-text-light);">Mendorong toleransi antar agama/suku (Sila I, II). Partisipasi dalam Pemilu dan musyawarah (Sila IV). Praktik gotong royong dan menjaga persatuan dalam kehidupan sehari-hari.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="rounded-lg p-4 md:p-6 border" style="background-color: var(--color-bg-card); border-color: var(--color-border-subtle);">
+                <h2 class="text-2xl font-bold font-serif mb-4 text-center" style="color: var(--color-text-bright);">Pancasila sebagai Ideologi Terbuka</h2>
+                <p class="mb-6 leading-relaxed" style="color: var(--color-text-light);">
+                    Sebagai ideologi terbuka, Pancasila memiliki kemampuan unik untuk berinteraksi dengan perkembangan zaman tanpa kehilangan hakikatnya. Fleksibilitas ini didasarkan pada tiga tingkatan nilai yang saling terkait, sebagaimana dijelaskan dalam berbagai sumber akademis (misalnya, materi Universitas Terbuka, 2024).
+                </p>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-bold font-serif" style="color: var(--color-accent-gold);">1. Dimensi Idealis (Nilai Dasar)</h4>
+                        <p class="text-sm leading-relaxed" style="color: var(--color-text-light);">Ini adalah hakikat dan prinsip-prinsip inti Pancasila yang terkandung dalam Pembukaan UUD 1945. Nilai-nilai ini (Ketuhanan, Kemanusiaan, Persatuan, Kerakyatan, Keadilan) bersifat fundamental, permanen, dan tidak dapat diubah. Mereka adalah cita-cita luhur yang menjadi sumber utama ideologi dan landasan filosofis bangsa.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold font-serif" style="color: var(--color-accent-gold);">2. Dimensi Normatif (Nilai Instrumental)</h4>
+                        <p class="text-sm leading-relaxed" style="color: var(--color-text-light);">Ini adalah penjabaran lebih lanjut dari Nilai Dasar. Wujudnya adalah arahan, kebijakan, strategi, dan norma-norma hukum seperti yang tertuang dalam Batang Tubuh UUD 1945, Ketetapan MPR, dan Undang-Undang. Nilai instrumental ini bersifat kontekstual dan dapat disesuaikan dengan kebutuhan zaman, namun harus tetap mengacu pada Nilai Dasar.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold font-serif" style="color: var(--color-accent-gold);">3. Dimensi Realistis (Nilai Praksis)</h4>
+                        <p class="text-sm leading-relaxed" style="color: var(--color-text-light);">Ini adalah implementasi nyata Pancasila dalam kehidupan sehari-hari, baik oleh individu, masyarakat, maupun penyelenggara negara. Nilai praksis adalah bagaimana Pancasila hidup dan diwujudkan dalam tindakan nyata, seperti gotong royong, musyawarah, dan toleransi. Ini adalah dimensi di mana ideologi berinteraksi langsung dengan realitas sosial yang dinamis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-lg p-4 md:p-6 border" style="background-color: var(--color-bg-card); border-color: var(--color-border-subtle);">
+                <h2 class="text-2xl font-bold font-serif mb-4 text-center" style="color: var(--color-text-bright);">Hubungan Antar Perspektif</h2>
+                <p class="mb-6 text-center" style="color: var(--color-text-dim);">
+                    Ketiga perspektif ini tidak terpisah, melainkan saling terkait dan memperkuat. Filsafat memberikan dasar pemikiran, yang kemudian diformalkan menjadi Dasar Negara (hukum), dan dioperasionalkan sebagai Ideologi (pedoman) hidup bangsa.
+                </p>
+                <div class="flex flex-col items-center justify-center h-full min-h-[300px] md:min-h-[400px] py-8">
+                    
+                    <div class="p-4 border-2 rounded-lg shadow-md mb-4" style="border-color: var(--color-accent-gold); background-color: var(--color-bg-dark);">
+                        <h3 class="text-lg font-bold font-serif text-center" style="color: var(--color-accent-gold);">PANCASILA</h3>
+                        <p class="text-sm text-center" style="color: var(--color-text-light);">(Entitas Fundamental)</p>
+                    </div>
+
+                    <div class="w-px h-12" style="background-color: var(--color-border-subtle);"></div>
+                    <div class="w-full max-w-md h-px" style="background-color: var(--color-border-subtle);"></div>
+                    
+                    <div class="flex justify-between w-full max-w-md">
+                        <div class="w-1/3 flex justify-start"><div class="w-px h-12" style="background-color: var(--color-border-subtle);"></div></div>
+                        <div class="w-1/3 flex justify-center"><div class="w-px h-12" style="background-color: var(--color-border-subtle);"></div></div>
+                        <div class="w-1/3 flex justify-end"><div class="w-px h-12" style="background-color: var(--color-border-subtle);"></div></div>
+                    </div>
+
+                    <div class="flex justify-between w-full max-w-lg text-center">
+                        <div class="w-1/3 p-2">
+                            <div class="p-3 rounded-lg shadow" style="background-color: rgba(212, 175, 55, 0.9); color: var(--color-bg-dark);">
+                                <h4 class="font-bold text-sm md:text-base">Sistem Filsafat</h4>
+                                <p class="text-xs font-light">(Landasan Pikir)</p>
+                            </div>
+                        </div>
+                        <div class="w-1/3 p-2">
+                            <div class="p-3 rounded-lg shadow" style="background-color: rgba(192, 192, 192, 0.9); color: var(--color-bg-dark);">
+                                <h4 class="font-bold text-sm md:text-base">Dasar Falsafah</h4>
+                                <p class="text-xs font-light">(Landasan Hukum)</p>
+                            </div>
+                        </div>
+                        <div class="w-1/3 p-2">
+                            <div class="p-3 rounded-lg shadow" style="background-color: rgba(245, 245, 220, 0.9); color: var(--color-bg-dark);">
+                                <h4 class="font-bold text-sm md:text-base">Ideologi Negara</h4>
+                                <p class="text-xs font-light">(Pedoman Hidup)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rounded-lg p-4 md:p-6 mb-8 border" style="background-color: var(--color-bg-card); border-color: var(--color-border-subtle);">
+            <h2 class="text-2xl font-bold font-serif mb-4 text-center" style="color: var(--color-text-bright);">Referensi</h2>
+            <p class="mb-6 text-center max-w-3xl mx-auto" style="color: var(--color-text-dim);">
+                Analisis dan konten dalam infografis ini disintesis dari berbagai sumber akademis yang membahas kedudukan Pancasila.
+            </p>
+            <ul class="list-disc list-inside max-w-3xl mx-auto space-y-2 text-sm" style="color: var(--color-text-light);">
+                <li>Mudhofir, Ali. (1996). Pancasila sebagai Sistem Kefilsafatan. <i>Jurnal Filsafat, Desember 1996</i>.</li>
+                <li>Widisuseno, Iriyanto. (2014). Azas Filosofis Pancasila sebagai Ideologi dan Dasar Negara. <i>HUMANIKA, 20</i>(2).</li>
+                <li>Nurhikmah, Amalia Rizki, et al. (2021). Dinamika Pancasila sebagai Dasar Negara dan Pandangan Hidup Bangsa. <i>JURNAL PANCASILA, 2</i>(2).</li>
+                <li>Universitas Terbuka. (2024). Materi Sesi 3: Pancasila sebagai Dasar Falsafah Negara. <i>MKWN4110 Pancasila</i>.</li>
+                <li>Universitas Terbuka. (2024). Materi Sesi 4: Pancasila sebagai Ideologi Negara. <i>MKWN4110 Pancasila</i>.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="mt-12 border-t" style="border-color: var(--color-accent-gold);">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm" style="color: var(--color-text-dim);">
+                Infografis SPA ini dibuat untuk memvisualisasikan analisis konseptual Pancasila.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const chartColors = {
+            filsafat: 'rgba(212, 175, 55, 0.8)',      // Gold
+            filsafatBorder: 'rgba(212, 175, 55, 1)',
+            dasar: 'rgba(192, 192, 192, 0.8)',       // Silver
+            dasarBorder: 'rgba(192, 192, 192, 1)',
+            ideologi: 'rgba(245, 245, 220, 0.8)',   // Beige
+            ideologiBorder: 'rgba(245, 245, 220, 1)',
+            textLight: '#E0E0E0',
+            gridLines: 'rgba(255, 255, 255, 0.15)'
+        };
+
+        const radarCtx = document.getElementById('radarChart').getContext('2d');
+        const radarChart = new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Lingkup Teoretis', 
+                    'Kekuatan Hukum', 
+                    'Fleksibilitas (Adaptif)', 
+                    'Fungsi Pemersatu', 
+                    'Landasan Aksiologis (Nilai)'
+                ],
+                datasets: [
+                    {
+                        label: 'Sistem Filsafat',
+                        data: [9, 3, 4, 6, 9],
+                        backgroundColor: chartColors.filsafat,
+                        borderColor: chartColors.filsafatBorder,
+                        borderWidth: 2,
+                        pointBackgroundColor: chartColors.filsafatBorder
+                    },
+                    {
+                        label: 'Dasar Falsafah Negara',
+                        data: [6, 9, 2, 8, 5],
+                        backgroundColor: chartColors.dasar,
+                        borderColor: chartColors.dasarBorder,
+                        borderWidth: 2,
+                        pointBackgroundColor: chartColors.dasarBorder
+                    },
+                    {
+                        label: 'Ideologi Negara',
+                        data: [5, 5, 9, 9, 7],
+                        backgroundColor: chartColors.ideologi,
+                        borderColor: chartColors.ideologiBorder,
+                        borderWidth: 2,
+                        pointBackgroundColor: chartColors.ideologiBorder
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: chartColors.textLight,
+                            font: {
+                                size: 14,
+                                family: "'Inter', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: chartColors.gridLines
+                        },
+                        grid: {
+                            color: chartColors.gridLines
+                        },
+                        pointLabels: {
+                            color: chartColors.textLight,
+                            font: {
+                                size: 12,
+                                weight: '600',
+                                family: "'Inter', sans-serif"
+                            }
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(39, 39, 42, 0.75)', /* zinc-800 */
+                            color: chartColors.textLight,
+                            stepSize: 2,
+                            font: {
+                                size: 10,
+                                family: "'Inter', sans-serif"
+                            }
+                        },
+                        min: 0,
+                        max: 10
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
